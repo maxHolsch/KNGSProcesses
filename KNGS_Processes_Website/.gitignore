@@ -1,0 +1,165 @@
+# KNGS Email Progress Checker - .gitignore
+
+# === Node.js / NPM ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.node_repl_history
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# === Python Virtual Environments ===
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# === Build Artifacts ===
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# === Electron Build Artifacts ===
+out/
+release/
+app/dist/
+app/build/
+
+# === React Build Artifacts ===
+/build
+/public/build
+
+# === Configuration & Secrets ===
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config.local.cfg
+config.dev.cfg
+*.key
+*.pem
+
+# Exclude potentially sensitive config but keep the template
+config.cfg
+
+# === Logs ===
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+security.log
+application.log
+application.log.*
+
+# === Runtime Files ===
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# === Coverage Reports ===
+coverage/
+*.lcov
+.nyc_output
+
+# === IDE / Editor Files ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# === OS Generated Files ===
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.tmp
+*.temp
+
+# === Database Files ===
+*.db
+*.sqlite
+*.sqlite3
+
+# === Temporary Files ===
+tmp/
+temp/
+.tmp/
+.temp/
+
+# === Testing ===
+.jest/
+test-results/
+coverage/
+
+# === Webpack ===
+.webpack/
+
+# === Electron ===
+.electron/
+electron-builder.yml
+
+# === Package Files ===
+*.tar.gz
+*.zip
+*.rar
+
+# === Backup Files ===
+*.bak
+*.backup
+*~
+
+# === Local Development ===
+.local/
+local/
+
+# === Documentation Build (if using tools like Sphinx) ===
+docs/_build/
+site/
+
+# === Lock Files (keep package-lock.json but exclude others) ===
+yarn.lock
+pnpm-lock.yaml
+
+# === Azure / Microsoft Graph ===
+# Keep these patterns in case sensitive tokens get accidentally committed
+*token*
+*secret*
+*credential*
+
+# === Keep These Important Files ===
+# (Using negative patterns to ensure these are tracked)
+!package-lock.json
+!requirements.txt
+!README.md
+!*.md
+!.gitignore

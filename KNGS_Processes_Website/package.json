@@ -1,0 +1,59 @@
+{
+  "name": "email-progress-checker",
+  "version": "1.0.0",
+  "description": "Email Progress Checker - Electron App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently \"npm run react-dev\" \"wait-on http://localhost:3000 && electron .\"",
+    "react-dev": "react-scripts start",
+    "react-build": "react-scripts build",
+    "build": "npm run react-build && electron-builder",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "email-service": "python start_email_service.py",
+    "start-with-email": "concurrently \"npm run email-service\" \"npm run start\"",
+    "dev-with-email": "concurrently \"npm run email-service\" \"npm run react-dev\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "email-checker"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "electron": "^22.0.0",
+    "electron-builder": "^24.0.0",
+    "electron-is-dev": "^2.0.0",
+    "wait-on": "^7.0.1"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.8",
+    "lucide-react": "^0.518.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.7.0",
+    "styled-components": "^5.3.9",
+    "xlsx": "^0.18.5"
+  },
+  "homepage": ".",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
